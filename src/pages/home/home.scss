@@ -1,3 +1,52 @@
 page-home {
+    img{
+        max-height: 200px;
+        max-width: 100%;
+        height:auto;
+        transform: translateX(0px);
+    }
+    .ion-card{
+        width: 112%;
+        margin-left: -5%;
+        margin-bottom: 10px !important;
+
+        }
+        .main{
+            position: relative;
+            top: -10%;
+
+        }
+        .card-subtitle{
+            font-family: system;
+            font-display: normal;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+
+        }
+        ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 36%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            font-family: system;
+            font-display: normal;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 52%;
+            width: 100%;
+           
+
+          }
 
 }
