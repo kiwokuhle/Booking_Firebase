@@ -1,0 +1,103 @@
+
+<ion-content padding>
+ <div class="ion-card"  >
+   <ion-buttons start top left class="buttons" >
+     <button ion-button icon-only (click)="back()" >
+       <ion-icon name="arrow-back"></ion-icon>
+      </button>
+      </ion-buttons>
+      <img  class="img"src="{{image}}">  
+      <div class="address">
+        <ion-icon name="pin"></ion-icon> {{address}} 
+        <div class="title">{{hotelName}}</div>
+      </div>
+    </div>
+
+    <div padding class="segment" >
+      <ion-segment [(ngModel)]="pet">
+        <ion-segment-button value="Review">
+          Review
+        </ion-segment-button>
+        <ion-segment-button value="Photos">
+          Photos
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="pet" class="switch-seg" >
+      <ion-list *ngSwitchCase="'Review'">
+        <div class="main" >
+          <div class="top-section"  >
+            <div class="subtitle">
+              <h1>Hotel Description</h1>
+              {{description}}
+            </div>
+            <hr>
+            </div>
+            <div class="middle" >
+              <h1>hotel facilities</h1>
+              <hr>
+              <div class="container">
+              <div><img   src="../../assets/imgs/tray.png" alt=""  ></div>
+              <div> <img src="../../assets/imgs/wifi-logo (1).png" alt="" ></div>
+              <div><img src="../../assets/imgs/air-conditioner (3).png" alt=""></div>
+              <div><img src="../../assets/imgs/passage-of-time (2).png" alt=""></div>
+              <div><img src="../../assets/imgs/swimming-silhouette.png" alt=""></div>
+            </div>
+            </div>
+            <div class="containers" >
+              <div>ROOM <br> SERVICES</div>
+              <div>WIFI <br> -ACCESS</div>
+              <div>Air <br>  CONDITIONER</div>
+              <div>24 HOURS <br> RECEPTION</div>
+              <div>SWIMMING  <br> POOL</div>
+            </div>
+            <hr>
+
+            <div class="button-container" >
+              <div class="book" ><b>{{price}}</b></div>
+              <div class="button" color="lit" ><button ion-button block (click)="book()" >Book Now</button></div>
+            </div>
+            <hr>
+          </div> 
+
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'Photos'">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-6 col-md col-xl-3 *ngFor="let image of [1,2,3,4,5,6,7,8,9,10,11]">
+                <div class="imgage-contianer" [style.background-image]="'(../../assets/imgs/assets/imgs/'+ image + '.jpg)'" >
+   <img src="../../assets/imgs/11.jpg" alt="">
+   <img src="../../assets/imgs/10.jpg" alt="">
+   <img src="../../assets/imgs/9.jpg" alt="">
+   <img src="../../assets/imgs/8.jpg" alt="">
+   <img src="../../assets/imgs/7.jpg" alt="">
+
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+       
+
+
+          <div class="imgs" >
+            <img class="images" src="../../assets/imgs/11.jpg" alt="">
+            <div class="overlay" >
+              <div class="text"> Hotello Bath Room </div>
+
+            </div>
+
+          </div>
+
+
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="../../assets/imgs/11.jpg">
+            </ion-thumbnail>
+            <h2>Luna</h2>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-content>

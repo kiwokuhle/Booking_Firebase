@@ -1,12 +1,10 @@
 
 
 export const FireBase_Config ={
-
-    
-        apiKey: "AIzaSyBIyZiLeMNYxHM6ZnBRQp29jS-NMT5WKuI",
-        authDomain: "first-firebase-516c6.firebaseapp.com",
-        databaseURL: "https://first-firebase-516c6.firebaseio.com",
-        projectId: "first-firebase-516c6",
-        storageBucket: "first-firebase-516c6.appspot.com",
-        messagingSenderId: "589678405377"
-      };
+    apiKey: "AIzaSyAaEiD6v4_dRdXNINUsSq0NBwqe6lUrAx0",
+    authDomain: "bookingsystem-1527757360475.firebaseapp.com",
+    databaseURL: "https://bookingsystem-1527757360475.firebaseio.com",
+    projectId: "bookingsystem-1527757360475",
+    storageBucket: "bookingsystem-1527757360475.appspot.com",
+    messagingSenderId: "1048589754543"
+  };

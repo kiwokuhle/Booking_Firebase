@@ -1,0 +1,91 @@
+
+<ion-content padding>
+
+        <!-- <ion-buttons start top left class="buttons" >
+          <button ion-button icon-only (click)="back()" >
+            <ion-icon name="arrow-back"></ion-icon>
+           </button>
+           </ion-buttons> -->
+  <div class="ion-card"  >
+    <img  class="img"src="{{image}}">  
+             <div class="address">
+               <ion-icon name="pin"></ion-icon> {{address}} 
+               <div class="title">{{hotelName}}</div>
+             </div>
+           </div> 
+  <div class="hotello-booking" >
+    <div> 
+        <h2>Hotello Booking</h2>
+      <ion-grid>
+        <ion-row class="check">
+          <ion-col>
+            <div class="check" >
+              <ion-item no-lines  color="grey" >
+                  <ion-label>Check in </ion-label>
+                <ion-datetime displayFormat="MMM DD YYYY"  name="checkIn" [(ngModel)]="Booking.checkIn"></ion-datetime>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+
+            <div class="check" >
+              <ion-item no-lines color="grey">
+                  <ion-label>Check out</ion-label>
+                <ion-datetime displayFormat="MMMM DD YYYY"  name="checkOut" [(ngModel)]="Booking.checkOut"></ion-datetime>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="num" >
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div>
+                  <ion-item no-lines color="grey">
+                    
+                    <ion-input type="tel" placeholder="Child" max=3  [(ngModel)]="Booking.noChildren" name="noChildren" ></ion-input>
+                  </ion-item>
+                </div>
+              </ion-col>
+              <ion-col >
+                <div>
+                  <ion-item no-lines color="grey" >
+                    <ion-input type="number" placeholder="Rooms"  min=1 max=3 [(ngModel)]="Booking.roomNo" name="roomNo" ></ion-input>
+                  </ion-item>
+                </div>
+              </ion-col>
+              <ion-col>
+                
+                <div>
+                  <ion-item no-lines color="grey" >
+                    <ion-input type="number"  min="1"max="5" id="noAdults" placeholder="Adults"  [(ngModel)]="Booking.noAdults" name="noAdults"></ion-input>
+                  </ion-item>
+                </div>
+              </ion-col>
+            </ion-row>
+             </ion-grid>
+            </div>
+            <div class="down" >
+                <ion-grid>
+                    <ion-row class="check">
+                      <ion-col> 
+                        <div class="book"  >
+                          {{price}}
+                        </div>
+                      </ion-col>
+                      <ion-col>
+                        <div class="button-container">
+                              <button ion-button block (click)="AddBooking(Booking)" color="dark">SUBMIT</button>
+                        </div>         
+                      </ion-col>
+                    </ion-row>
+                    </ion-grid>
+            </div>
+
+ 
+  
+  </div>
+</ion-content>

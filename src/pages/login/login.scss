@@ -1,6 +1,9 @@
 page-login {
     .main{
+        position: relative;
         height: auto;
+        top: -20px;
+        padding: 3%;
     }
     .background{
         background:#222431;
@@ -16,6 +19,7 @@ page-login {
     }
     .item{
         background: #22243100;
+        color: #51B7CD;
 
     }
     .list{
@@ -58,8 +62,15 @@ page-login {
       
       .text-input::-webkit-input-placeholder {
         color: #51B7CD;
+
       
       }
-  
+      .forget-password{
+          position: relative;
+          text-align: right;
+          top: -15px;
+          font-size: 0.4px;
+          right: -10px;
+      }
 
 }

@@ -1,0 +1,196 @@
+page-display {
+    .segment{
+        position: relative;
+        top: -10%;
+    }
+    .switch-seg{
+        position: relative;
+        top: -10%;
+        text-align: center;
+    }
+    .title {
+        position: absolute;
+        top: -90px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        font-family: system;
+        font-display: normal;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        }
+      .top-section{
+          position: relative;
+          width: 112%;
+          margin-left: -15px;
+          margin-top: -18px;
+          height: auto;
+
+        }
+        .subtitle{
+            padding: 5px;
+            position: relative;
+            padding: 5%;
+           
+        }
+        .top{
+            position: relative;
+            top: -30px;
+            width: 120%;
+            margin-left:-10%; 
+        }
+       .buttons{
+        position: absolute;
+        left: 0%;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        }
+         .button-container{
+             display: grid;
+             grid-template-columns: 1fr 1fr ;
+             background-color: #51B7CD;
+
+         }
+        .button-container>div{}
+
+        .button-container>div:nthchild(odd){}
+
+        .book{
+            font-size: 22px;
+            color: white;
+            position: relative;
+            top: 10px;
+
+
+        }
+
+        .address{
+            position: relative;
+            bottom: 60px;
+            letter-spacing: 0.1em;
+            font-family: system;
+            font-display: normal;
+            background-color: rgba(0, 0, 0, 0.288);
+            color: white;
+            font-size: 15px;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .img{
+            max-height: 200px;
+            max-width: 100%;
+            height:auto;
+            width: 100%;
+            transform: translateX(0px);
+        }
+        .icons{
+            float: left;
+            display: flex;
+
+
+
+        }.button{
+            background-color:#222431dc; 
+            font-size: 20px;
+            height: 55px;
+        }
+        .container{
+            display: grid;          
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+         }
+         .container > div{
+         }
+         .container > div:nthchild(odd){
+         }
+         .containers{
+             font-size: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            
+
+         }
+         
+         .containers > div{
+         }
+         .containers > div:nthchild(odd){
+         }
+
+         hr {
+            display: block;
+            unicode-bidi: isolate;
+            -webkit-margin-before: 0.5em;
+            -webkit-margin-after: 0.5em;
+            -webkit-margin-start: auto;
+            -webkit-margin-end: auto;
+            overflow: hidden;
+            border-style: inset;
+            border-width: 1px;
+            color: #51B7CD
+        }
+
+
+        .imgs {
+            position: relative;
+            width: 50%;
+          }
+          
+          .images {
+            display: block;
+            width: 100%;
+          }
+          
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #008CBA;
+          }
+          
+          .imgs:hover .overlay {
+            opacity: 1;
+          }
+          
+          .text {
+            color: white;
+            font-size: 
+            20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+
+          .image-container{
+              background-size: cover;
+              min-height: 200px;
+
+          }
+          .ion-card{
+            width: 115%;
+            margin-left: -8%;
+            margin-bottom: -0px !important;
+            position: relative;
+            top: -16px;
+    
+            }
+
+       
+       
+
+}

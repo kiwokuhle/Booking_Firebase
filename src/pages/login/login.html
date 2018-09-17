@@ -1,24 +1,11 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
 <ion-content padding class="background">
   
-  <div class="main">
+  <div class="main" ion-fixed >
     <div  class="image">
       <img src="../../assets/imgs/hotel-building.png" alt="" width="100px" >
-      <h1>HOTTELL0</h1>
+      <h1>HOTELL0</h1>
   </div>
   <div class="list">
     <ion-list no-lines >
@@ -44,8 +31,17 @@
       <div class="signup" >
           <button ion-button block outline color="lit"(click)="register(user)" >SIGNUP</button>
 
-          
+          <button ion-button (click)="home()" >
+            home
+          </button>
+
       </div>
+      <div class="forget-password" >
+         <button color="lit"  ion-button clear (click)="forgetPassword()" >Forget Password</button>
+      </div>
+     
+
+
     </div>
   </div>
     

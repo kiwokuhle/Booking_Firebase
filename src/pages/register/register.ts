@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 import  {AngularFireAuth} from "angularfire2/auth";
 import { User} from '../../app/models/user';
+import {LoginPage} from '../../pages/login/login';
+import {Provider} from '../../providers/provider/provider';
+import { HomePage } from '../home/home';
 
 
 /**
@@ -19,45 +22,33 @@ import { User} from '../../app/models/user';
 export class RegisterPage {
   user= {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private AngFAuth:AngularFireAuth,public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private auth: Provider,public alertCtrl: AlertController,private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-  
-
-
   async register(user:User){
-    // if (this.user.password == this.user.confirm) {
-    try{
-    const results = await this.AngFAuth .auth.createUserWithEmailAndPassword(user.email,user.password) .then(()=>{
-      const alert = this.alertCtrl.create({
-        title: 'Success',
-        subTitle: 'successfully registered',
-});
-      alert.present();
-      
-    },(Error=>{
-      const alert = this.alertCtrl.create({
-        title: 'Error!',
-        subTitle: 'your password or email is invalid please try again',
-        buttons: ['OK']
+    this.auth.register(this.user.email,this.user.password).then(data =>{
+      let toast = this.toastCtrl.create({
+        message: 'User was added successfully now login ',
+        duration: 4000,
+        position: 'middle'
       });
-      alert.present();
+    
+      toast.onDidDismiss(() => {
+        console.log('Dismissed toast');
+      });
+    
+      toast.present();
+      this.navCtrl.push(LoginPage)
 
-    }))
-    console.log(results)
-  }catch(e){
-    console.error(e);
+    },Error =>{
+      alert(Error);
+    })
 
-   } 
-   //}
-      
-  //  else {
-      
-  //   }
-
-
+}
+login=function(){
+  this.navCtrl.push(LoginPage)
 }
 }

@@ -3,7 +3,8 @@ export interface User{
     surname:string;
     email: string;
     password: string;
-    confirm:string;
+    confirmPassword:string;
+    
     
 
 }

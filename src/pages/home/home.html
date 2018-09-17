@@ -1,71 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
+    <ion-navbar>
+        <button ion-button clear right icon-only color="lit"(click)="back()">
+            <ion-icon  md="md-more" ></ion-icon>
+          </button>
+     
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content padding class="background" >
+ 
   <div class="main" >
 
  
-    <ion-card class="ion-card" >
-        <img src="../../assets/imgs/0.jpg">
-        <div class="card-title">SUN1 Southgate</div>
-        <div class="card-subtitle">R 584</div>
+    <ion-card  *ngFor="let i of arry; let a = index" class="ion-card" (click)='presentModal(a)'>
+        <img src="{{i.image}}">
+        <div class="card-title">{{i.hotelName}}</div>
+        <div class="card-subtitle">{{i.price}}</div>
       </ion-card>
+     </div> 
     
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/1.jpg"/>
-        <div class="card-title">SUN1 Berea</div>
-        <div class="card-subtitle">64 Listings</div>
-      </ion-card>
-    
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/2.jpg"/>
-        <div class="card-title">SUN1 Wynberg</div>
-        <div class="card-subtitle">R 594</div>
-      </ion-card>
-    
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/3.jpg"/>
-        <div class="card-title">Park Station Inn</div>
-        <div class="card-subtitle">R 595</div>
-      </ion-card>
-      
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/4.jpg"/>
-        <div class="card-title">SUN1 O.R. Tambo International Airport</div>
-        <div class="card-subtitle">R 559</div>
-      </ion-card>
-      
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/5.jpg"/>
-        <div class="card-title">SUN1 Edenvale</div>
-        <div class="card-subtitle">R 595</div>
-      </ion-card>
-      
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/6.jpg"/>
-        <div class="card-title">SUN1 Pretoria</div>
-        <div class="card-subtitle">R 600</div>
-      </ion-card>
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/7.jpg"/>
-        <div class="card-title">SUN1 Vereeniging</div>
-        <div class="card-subtitle">R 600</div>
-      </ion-card>
-
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/8.jpg"/>
-        <div class="card-title"> SUN1 Benoni</div>
-        <div class="card-subtitle"> R 550</div>
-      </ion-card>
-      <ion-card class="ion-card" >
-        <img src="../../assets/imgs/9.jpg"/>
-        <div class="card-title">SUN1 Midrand</div>
-        <div class="card-subtitle"> R 595</div>
-      </ion-card>
-     </div>
 </ion-content>
